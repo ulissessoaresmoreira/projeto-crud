@@ -1,7 +1,10 @@
 const express = require('express')
 const path = require('path')
-
+const db = require('./database') // NÃO PRECISA INFORMAR O NOME DO ARQUIVO INDEX
 const app = express()
+
+// CONEXÃO COM O BANCO DE DADOS
+db.connect()
 
 // definindo o template engine
 app.set('view engine', 'ejs')
