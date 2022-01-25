@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Iniciando o projeto</h1>
+    <p> Nesta aula vamos aprender os 4 operações básicas de um banco de dados CRUD - Create, Read, Update e Delete</p>
+    <p> Foram instalados no npm init -y, npm install nodemon --save-dev, express, mongoose, npm i ejs</p>
+    <p> Uma boa prática é criar o gitignore e incluir nele o node_modules</p>
+    <p> Para subir ao git, primeiro digitamos no gitbash "git init", depois criamos o repositório no github o nome foi projeto-crud, depois colar "git remote add origin https://github.com/ulissessoaresmoreira/projeto-crud.git" na linha de comando do gitbash, confere com git status, depois git add . , em seguida, git commit -m "alguma referência para o que vai ser feito no commit" e por ultimo git push, se for a primeira vez ele vai dar a mensagem git push --set-upstream origin master, então digitar git push --set-upstream origin master</p>
+    <h2>Padrão de organização dos arquivos no Visual Studio Code</h2> 
+    <p> Este padrão de organização dos arquivos é o mais comum de ser visto nas empresas</p>
+    <p> Todos os arquivos estarão numa pasta chamada SRC (source) e na raiz do projeto ficam apenas os arquivos de configuração</p>
+    <p> OBS: O arquivo do servidor não será mais "index.js", mas sim "server.js", pois é um nome que tem mais relação com o que é feito, é o arquivo que realmente inicia o servidor</p>
+
+    <h2> Configuração no package.json:</h2>
+    <p> "dev": "nodemon src/server.js", antes era "start", agora é "dev", pois o nodemon deve rodar apenas no ambiente de , o "start" é o padrão para quando for fazer o start da aplicação rodar no servidor online, lembrando que o projeto atual vai rodar no MONGO  </p>
+</body>
+</html>
