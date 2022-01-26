@@ -1,10 +1,15 @@
 const express = require('express')
 const path = require('path')
+
 const db = require('./database') // NÃO PRECISA INFORMAR O NOME DO ARQUIVO INDEX
+const routes = require('./routes')
+
 const app = express()
 
 // CONEXÃO COM O BANCO DE DADOS
 db.connect()
+
+
 
 // definindo o template engine
 app.set('view engine', 'ejs')
@@ -18,12 +23,9 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({ extended: true}))
 
 
-// rotas
-app.get('/', (req, res) => {
-    res.render('index', {
-        title: 'Titulo Teste'
-    })
-})
+// definindo as rotas
+app.use('/', routes)
+
 
 // 404 error (not found)
 app.use((req, res) => { // middleware
