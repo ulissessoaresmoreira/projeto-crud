@@ -2,7 +2,7 @@ const express = require('express')
 const path = require('path')
 
 const db = require('./database') // NÃO PRECISA INFORMAR O NOME DO ARQUIVO INDEX
-const routes = require('./routes')
+const routes = require('./routes') // const routes = require('./routes')
 
 const app = express()
 

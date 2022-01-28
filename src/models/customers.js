@@ -7,7 +7,7 @@ const schema = new mongoose.Schema({
     password: String
 })
 
-const Model = mongoose.model('custumer', schema)
+const Model = mongoose.model('customer', schema)
 
 
 module.exports(mongoose)
