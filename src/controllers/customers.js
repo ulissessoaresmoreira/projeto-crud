@@ -1,3 +1,5 @@
+const CustomersModel = require('../models/customers')
+
 function add(req, res){
     const {
         name,
@@ -5,8 +7,17 @@ function add(req, res){
         email,
         password,
     } = req.body
-    
-    res.end()
+
+    const register = new CustomersModel({
+        name,
+        age,
+        email,
+        password,
+    })
+
+    register.save()
+
+    res.send('Registrado com sucesso!')
 }
 
 module.exports = {

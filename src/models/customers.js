@@ -10,14 +10,18 @@ const schema = new mongoose.Schema({
 const Model = mongoose.model('customer', schema)
 
 
+
+module.exports = Model
+
+/*
 module.exports(mongoose)
 
 
 // USADO APENAS PARA REGISTRAR NO BANCO DE DADOS
-/*const register = new Model({
+const register = new Model({
     name: 'Ulisses',
     age: 40,
-    email: 'ulissessm@gmail.com',
+    email: 'ulm@gmail.com',
     password: '123456',
 })
 
