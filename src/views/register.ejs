@@ -8,6 +8,12 @@
 <body>
     <h1> <%- title %> </h1>
 
+    <%- include('partials/navbar.ejs') %>
+
+    <% if (typeof message !== 'undefined') { %>
+        <%= message %>
+    <% } %>
+
     <form action="/register/add" method="POST">
         <div>
             <label> Nome </label>
@@ -19,7 +25,7 @@
         </div>
         <div>
             <label> E-mail </label>
-            <input type="email" name="e-mail" placeholder="Digite seu e-mail">
+            <input type="email" name="email" placeholder="Digite seu e-mail">
         </div>
         <div>
             <label> Password </label>

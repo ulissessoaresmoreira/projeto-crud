@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <%- include('partials/head.ejs')%>
+    
+</head>
+<body>
+    <h1> Listagem de Usuários </h1>
+    <%- include('partials/navbar.ejs') %>
+    
+    <div class="list">
+        <% users.forEach((user) => {%>
+            <li>
+                <%= user.name%> - <%= user.email%> - Idade:<%= user.age%>
+            </li>
+        <% }) %>
+    </div>
+    <hr>
+
+    
+    <%- include('partials/foot.ejs')%>
+</body>
+</html>

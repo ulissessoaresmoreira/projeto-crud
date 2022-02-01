@@ -1,20 +1,20 @@
 const router = require('express').Router()
 
 const CustomersController = require('../controllers/customers')   // O PADRÃO É COLOCAR COM A PRIMEIRA LETRA DE CADA PALAVRA EM MAIÚSCULA, POIS ISSO INDICA QUE É UM CONTROLLER, ASSIM COMO O MODEL
+const IndexController = require('../controllers/index')
+
 
 // rotas
-router.get('/', (req, res) => {
-    res.render('index', {
-        title: 'Titulo Teste'
-    })
-})
+router.get('/', IndexController.index)
 
-router.get('/register', (req, res) => {
-    res.render('register', {
-        title: 'Cadastro de clientes'
-    })
-})
-
+// registro
+router.get('/register', CustomersController.index)
 router.post('/register/add', CustomersController.add)
 
+// rota para listar usuários
+router.get('/list', CustomersController.listUsers)
+
 module.exports = router
+
+
+

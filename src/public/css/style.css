@@ -2,3 +2,15 @@ body{
     background-color: black;
     color: chartreuse;
 }
+
+
+.list{
+    background-color: #c2c2c2;
+    color: black;
+    width: 300px;
+    margin-left: 30px;
+}
+
+.list li{
+    list-style: none;
+}
