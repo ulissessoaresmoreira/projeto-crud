@@ -35,7 +35,7 @@ const passwordCrypto = await crypto(password)
     })
 }
 
-async function listUsers (req, res){
+async function list (req, res){
     const users = await CustomersModel.find()
     res.render('list', {
         title: 'Listagem de usuários',
@@ -43,8 +43,15 @@ async function listUsers (req, res){
     })
 }
 
+function formEdit (req, res){
+    res.render('edit',{
+        title: 'Editar usuário'
+    })
+}
+
 module.exports = {
     index,
     add,
-    listUsers,
+    list,
+    formEdit,
 }
