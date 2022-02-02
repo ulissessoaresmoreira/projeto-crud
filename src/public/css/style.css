@@ -14,3 +14,12 @@ body{
 .list li{
     list-style: none;
 }
+
+
+
+.tabela{  
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+}
+
+
