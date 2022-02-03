@@ -17,15 +17,15 @@
     <form action="/edit" method="POST">
         <div>
             <label> Nome </label>
-            <input type="text" name="name" placeholder="Digite o seu nome" id="">
+            <input type="text" name="name" placeholder="Digite o seu nome" value="<%= user.name%>">
         </div>
         <div>
             <label> Idade </label>
-            <input type="number" name="age" placeholder="Digite sua idade">
+            <input type="number" name="age" placeholder="Digite sua idade" value="<%= user.age%>">
         </div>
         <div>
             <label> E-mail </label>
-            <input type="email" name="email" placeholder="Digite seu e-mail">
+            <input type="email" name="email" placeholder="Digite seu e-mail" value="<%= user.email%>">
         </div>
         <div>
             <label> Password </label>

@@ -43,9 +43,12 @@ async function list (req, res){
     })
 }
 
-function formEdit (req, res){
+async function formEdit (req, res){
+    const {id} = req.query
+    const user = await CustomersModel.findById(id)
     res.render('edit',{
-        title: 'Editar usuário'
+        title: 'Editar usuário',
+        user,
     })
 }
 

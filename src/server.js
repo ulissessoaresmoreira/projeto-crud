@@ -34,5 +34,5 @@ app.use((req, res) => { // middleware
 
 
 // executando o servidor
-const port = process.env.PORT || 8060
+const port = process.env.PORT || 8080
 app.listen(port, () => console.log(`Server is listening on port ${port}`))
