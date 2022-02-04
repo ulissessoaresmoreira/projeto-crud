@@ -14,7 +14,7 @@
         <%= message %>
     <% } %>
 
-    <form action="/edit" method="POST">
+    <form action="/edit/<%= user._id%>" method="POST">
         <div>
             <label> Nome </label>
             <input type="text" name="name" placeholder="Digite o seu nome" value="<%= user.name%>">
@@ -27,10 +27,7 @@
             <label> E-mail </label>
             <input type="email" name="email" placeholder="Digite seu e-mail" value="<%= user.email%>">
         </div>
-        <div>
-            <label> Password </label>
-            <input type="password" name="password" placeholder="Digite sua senha">
-        </div>
+
         <button type="submit"> Editar </button>
     </form>
 

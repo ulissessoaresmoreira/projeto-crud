@@ -52,9 +52,30 @@ async function formEdit (req, res){
     })
 }
 
+async function edit(req, res){
+    const {
+        name,
+        age,
+        email,
+    } = req.body
+    const {id} = req.params
+    const user = await CustomersModel.findById(id)
+    user.name = name
+    user.age = age
+    user.email = email
+    user.save()
+    res.render('edit',{
+        title: 'Editar Usuário',
+        user,
+        message: 'Alteração realizada com sucesso!'
+        
+    })
+}
+
 module.exports = {
     index,
     add,
     list,
     formEdit,
+    edit,
 }
